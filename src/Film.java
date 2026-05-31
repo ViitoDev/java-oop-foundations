@@ -2,9 +2,13 @@ public class Film {
     String filmName;
     int yearLaunch;
     boolean planIncluded;
-    private double allFilmRate;
+    private double rateQuantity;
     private int totalRates;
     int runTime;
+
+    int getTotalRates () {
+        return totalRates;
+    }
 
     void displayTechnicalSpecs () {
         System.out.println("Film name  : " + filmName);
@@ -12,11 +16,11 @@ public class Film {
     }
 
     void avaluateFilm (double note) {
-        allFilmRate += note;
+        rateQuantity += note;
         totalRates++;
     }
 
     double returnMedia () {
-        return allFilmRate / totalRates;
+        return rateQuantity / totalRates;
     }
 }
