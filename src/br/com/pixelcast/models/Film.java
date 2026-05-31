@@ -1,3 +1,5 @@
+package br.com.pixelcast.models;
+
 public class Film {
     String filmName;
     int yearLaunch;
@@ -6,21 +8,21 @@ public class Film {
     private int totalRates;
     int runTime;
 
-    int getTotalRates () {
+    public int getTotalRates () {
         return totalRates;
     }
 
-    void displayTechnicalSpecs () {
-        System.out.println("Film name  : " + filmName);
+    public void displayTechnicalSpecs () {
+        System.out.println("br.com.pixelcast.models.Film name  : " + filmName);
         System.out.println("Year Launch: " + yearLaunch);
     }
 
-    void avaluateFilm (double note) {
+    public void avaluateFilm (double note) {
         rateQuantity += note;
         totalRates++;
     }
 
-    double returnMedia () {
+    public double returnMedia () {
         return rateQuantity / totalRates;
     }
 }

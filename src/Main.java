@@ -1,5 +1,7 @@
+import br.com.pixelcast.models.Film;
+
 public class Main {
-    static void main() {
+    public static void main() {
         Film film1 = new Film();
         film1.filmName = "Mortal Kombat";
         film1.yearLaunch = 2018;
