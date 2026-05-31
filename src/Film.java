@@ -2,8 +2,8 @@ public class Film {
     String filmName;
     int yearLaunch;
     boolean planIncluded;
-    double allFilmRate;
-    int totalRates;
+    private double allFilmRate;
+    private int totalRates;
     int runTime;
 
     void displayTechnicalSpecs () {
