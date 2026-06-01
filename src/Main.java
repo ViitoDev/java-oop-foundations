@@ -3,9 +3,9 @@ import br.com.pixelcast.models.Film;
 public class Main {
     public static void main() {
         Film film1 = new Film();
-        film1.filmName = "Mortal Kombat";
-        film1.yearLaunch = 2018;
-        film1.runTime = 110;
+        film1.setFilmName("Mortal Kombat");
+        film1.setYearLaunch(2018);
+        film1.setRunTime(110);
 
         film1.displayTechnicalSpecs();
         film1.avaluateFilm(10);

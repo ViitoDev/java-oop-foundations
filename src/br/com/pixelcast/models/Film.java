@@ -1,15 +1,47 @@
 package br.com.pixelcast.models;
 
 public class Film {
-    String filmName;
-    int yearLaunch;
-    boolean planIncluded;
+    private String filmName;
+    private int yearLaunch;
+    private boolean planIncluded;
     private double rateQuantity;
     private int totalRates;
-    int runTime;
+    private int runTime;
 
     public int getTotalRates () {
         return totalRates;
+    }
+
+    public String getFilmName() {
+        return filmName;
+    }
+
+    public int getRunTime() {
+        return runTime;
+    }
+
+    public boolean isPlanIncluded() {
+        return planIncluded;
+    }
+
+    public int getYearLaunch() {
+        return yearLaunch;
+    }
+
+    public void setFilmName(String filmName) {
+        this.filmName = filmName;
+    }
+
+    public void setYearLaunch(int yearLaunch) {
+        this.yearLaunch = yearLaunch;
+    }
+
+    public void setRunTime(int runTime) {
+        this.runTime = runTime;
+    }
+
+    public void setPlanIncluded(boolean planIncluded) {
+        this.planIncluded = planIncluded;
     }
 
     public void displayTechnicalSpecs () {
