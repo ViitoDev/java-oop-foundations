@@ -1,9 +1,12 @@
 import br.com.pixelcast.models.Film;
+import br.com.pixelcast.models.Serie;
 
 public class Main {
     public static void main() {
         Film film1 = new Film();
-        film1.setFilmName("Mortal Kombat");
+        Serie serie1 = new Serie();
+
+        film1.setName("Mortal Kombat");
         film1.setYearLaunch(2018);
         film1.setRunTime(110);
 
@@ -12,5 +15,13 @@ public class Main {
         film1.avaluateFilm(0);
         System.out.println("Total rating : " + film1.getTotalRates());
         System.out.println(film1.returnMedia());
+
+        serie1.setName("The office");
+        serie1.setYearLaunch(2005);
+        serie1.setSeasons(9);
+        serie1.setSeasonsEpisodes(11);
+        serie1.setSeasonMinutes(30);
+        serie1.displayTechnicalSpecs();
+        System.out.println("Duration for binge-watching : " + serie1.getRunTime());
     }
 }
