@@ -1,6 +1,8 @@
 package br.com.pixelcast.models;
 
-public class Film extends Title {
+import br.com.pixelcast.calculations.Classificate;
+
+public class Film extends Title implements Classificate {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Film extends Title {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClassificate() {
+        return (int) returnMedia() / 2;
     }
 }

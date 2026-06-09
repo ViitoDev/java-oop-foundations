@@ -1,4 +1,6 @@
+import br.com.pixelcast.calculations.RecomendationFilter;
 import br.com.pixelcast.calculations.TimeCalculate;
+import br.com.pixelcast.models.Episode;
 import br.com.pixelcast.models.Film;
 import br.com.pixelcast.models.Serie;
 
@@ -7,6 +9,8 @@ public class Main {
         Film film1 = new Film();
         Serie serie1 = new Serie();
         TimeCalculate calculator = new TimeCalculate();
+        RecomendationFilter filter = new RecomendationFilter();
+        Episode episode1 = new Episode();
 
         film1.setName("Mortal Kombat");
         film1.setYearLaunch(2018);
@@ -29,5 +33,9 @@ public class Main {
         calculator.include(film1);
         System.out.println(calculator.getTotalTime());
 
+        episode1.setNumber(1);
+        episode1.setSerie("The Big Bang Theory");
+        episode1.setTotalViews(300);
+        filter.filter(episode1);
     }
 }
