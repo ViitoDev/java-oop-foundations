@@ -4,15 +4,20 @@ import br.com.pixelcast.models.Episode;
 import br.com.pixelcast.models.Film;
 import br.com.pixelcast.models.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main() {
-        Film film1 = new Film();
+        Film film1 = new Film("Mortal Kombat");
+        Film film2 = new Film("The Lord of Rings");
         Serie serie1 = new Serie();
         TimeCalculate calculator = new TimeCalculate();
         RecomendationFilter filter = new RecomendationFilter();
         Episode episode1 = new Episode();
+        ArrayList<Film> filmList = new ArrayList<>();
+        filmList.add(film1);
+        filmList.add(film2);
 
-        film1.setName("Mortal Kombat");
         film1.setYearLaunch(2018);
         film1.setRunTime(110);
 
@@ -37,5 +42,10 @@ public class Main {
         episode1.setSerie("The Big Bang Theory");
         episode1.setTotalViews(300);
         filter.filter(episode1);
+
+        System.out.println("Size of the list : " + filmList.size());
+        System.out.println("First " + filmList.get(0).toString());
+
+        film1.toString();
     }
 }
